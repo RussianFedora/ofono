@@ -6,12 +6,15 @@ Summary:        oFono - Open Source Telephony
 Group:          System Environment/Daemons
 License:        GPLv2
 URL:            http://ofono.org/
-Source0:        http://www.kernel.org/pub/linux/network/ofono/ofono-0.44.tar.bz2
+Source0:        http://www.kernel.org/pub/linux/network/%{name}/%{name}-%{version}.tar.bz2
 Source1:	%{name}.initscript
 Source2:	%{name}.sysconfig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires:  glib-devel dbus-devel libudev-devel >= 143 bluez-libs-devel >= 4.30
+BuildRequires:  dbus-devel
+BuildRequires:  libudev-devel >= 143
+BuildRequires:  bluez-libs-devel >= 4.30
+BuildRequires:  glib2-devel >= 2.22
 #Requires:       
 
 %description
